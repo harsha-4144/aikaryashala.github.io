@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0b1020;
+  color: white;
+}
+
+/* Top Button */
+.batch-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ff5c5c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+/* Vision */
+/* =======================
+   VISION (REFINED)
+======================= */
+.vision {
+  padding: 90px 20px 80px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.vision h1 {
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+/* Highlighted core belief */
+.vision-quote {
+  max-width: 820px;
+  margin: 0 auto 50px;
+  padding: 28px 32px;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.7;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    180deg,
+    rgba(59, 130, 246, 0.12),
+    rgba(59, 130, 246, 0.04)
+  );
+
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px rgba(59,130,246,0.35);
+}
+
+/* Supporting explanation */
+.vision-text {
+  max-width: 880px;
+  margin: auto;
+  text-align: center;
+}
+
+.vision-text p {
+  font-size: 16.5px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 26px;
+}
+
+
+/* Journey */
+.journey {
+  padding: 80px 0;
+}
+
+.journey h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: #3b82f6;
+}
+
+.timeline-item {
+  width: 50%;
+  padding: 20px 40px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  width: 14px;
+  height: 14px;
+  background: #ff5c5c;
+  border-radius: 50%;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.left::before {
+  right: -7px;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item.right::before {
+  left: -7px;
+}
+
+/* Timeline Card */
+.content {
+  background: #11172f;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+}
+
+.content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(59,130,246,0.5);
+}
+
+/* ID Section */
+.id-section {
+  padding: 80px 0 100px;
+  background: linear-gradient(180deg, #050914, #020617);
+}
+
+.id-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+/* Wrapper */
+.id-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Arrows */
+.arrow {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  font-size: 28px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 5;
+}
+
+.arrow:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* Scroll Container */
+.id-scroll {
+  position: relative;
+  z-index: 1;
+  overflow-x: scroll;   /* IMPORTANT */
+  overflow-y: hidden;
+  cursor: grab;
+  scrollbar-width: none;
+}
+
+.id-scroll.dragging {
+  cursor: grabbing;
+}
+
+.id-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Track */
+.id-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+}
+
+/* ID Card */
+.id-card {
+  min-width: 180px;
+  height: 110px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.18),
+    rgba(255,255,255,0.05)
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.id-card:hover {
+  transform: scale(1.15) translateY(-8px);
+  box-shadow:
+    0 15px 35px rgba(0,255,255,0.25),
+    0 0 25px rgba(59,130,246,0.6);
+  z-index: 10;
+}
+
+/* Hover scroll zones */
+.hover-zone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  pointer-events: auto;
+  z-index: 3;
+}
+
+.hover-left {
+  left: 0;
+}
+
+.hover-right {
+  right: 0;
+}
